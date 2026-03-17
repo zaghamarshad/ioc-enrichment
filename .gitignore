@@ -1,0 +1,17 @@
+
+# environment variables
+.env
+
+# python virtual environment
+venv/
+.venv/
+
+# python cache
+__pycache__/
+*.pyc
+
+# mac files
+.DS_Store
+
+# project output
+output/
