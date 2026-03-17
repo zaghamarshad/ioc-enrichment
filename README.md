@@ -36,7 +36,7 @@ virustotal.py  abuseipdb.py
         ↓
   reporter.py  →  JSON report + CSV batch export
 ```
-
+![alt text](11.png)
 ---
 
 ## File Structure
