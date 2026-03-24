@@ -36,7 +36,7 @@ virustotal.py  abuseipdb.py
         ↓
   reporter.py  →  JSON report + CSV batch export
 ```
-![alt text](11.png)
+![Python threat intel pipeline — automates IOC triage via VirusTotal & AbuseIPDB with weighted risk scoring and Splunk SIEM integration.](11.png)
 ---
 
 ## File Structure
