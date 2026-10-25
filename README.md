@@ -67,8 +67,8 @@ ioc-enrichment/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/zaghamarshad/ioc-enrichment-pipeline.git
-cd ioc-enrichment-pipeline
+git clone https://github.com/zaghamarshad/ioc-enrichment.git
+cd ioc-enrichment
 ```
 
 ### 2. Install dependencies
