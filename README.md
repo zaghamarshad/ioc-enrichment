@@ -169,6 +169,13 @@ Scoring weights:
 - AbuseIPDB confidence score → up to **40 points**
 - Tor exit node bonus penalty → **+5 points**
 
+### What to do with the score
+
+- CRITICAL or HIGH: check where the IOC was seen in your own logs first, then note the VirusTotal and AbuseIPDB reasons in the ticket before escalating.
+- MEDIUM: keep the report, watch for the same IOC again, and check if other hosts talked to it.
+- LOW: record the result and close the check, unless the IOC came from a confirmed incident, in which case context matters more than the score.
+- A score is a starting point for triage, not proof on its own. A clean result does not clear a host that shows other signs of compromise.
+
 ---
 
 ## IOC Types Supported
