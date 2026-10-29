@@ -176,6 +176,12 @@ Scoring weights:
 - LOW: record the result and close the check, unless the IOC came from a confirmed incident, in which case context matters more than the score.
 - A score is a starting point for triage, not proof on its own. A clean result does not clear a host that shows other signs of compromise.
 
+### Tips for batch triage
+
+- Remove duplicate IOCs from the CSV before a run. Free API keys have daily limits, and repeat lookups waste them.
+- Run a small batch first and check the reports look right before running a large list.
+- Keep the JSON report for each IOC with the ticket or notes for that check, so the score and its reasons can be reviewed later without running the lookup again.
+
 ---
 
 ## IOC Types Supported
