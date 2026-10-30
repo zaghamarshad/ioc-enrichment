@@ -182,6 +182,10 @@ Scoring weights:
 - Run a small batch first and check the reports look right before running a large list.
 - Keep the JSON report for each IOC with the ticket or notes for that check, so the score and its reasons can be reviewed later without running the lookup again.
 
+### When one source fails
+
+One failed lookup does not break the run, and the report still holds what the other source returned. Treat a missing source as missing data, not as a clean result: the score was built from fewer points than usual. Note which source failed in the ticket, and run the IOC again later if the score is close to an escalation line or the IOC came from a confirmed incident.
+
 ---
 
 ## IOC Types Supported
