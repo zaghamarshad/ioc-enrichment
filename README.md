@@ -186,6 +186,10 @@ Scoring weights:
 
 One failed lookup does not break the run, and the report still holds what the other source returned. Treat a missing source as missing data, not as a clean result: the score was built from fewer points than usual. Note which source failed in the ticket, and run the IOC again later if the score is close to an escalation line or the IOC came from a confirmed incident.
 
+### Reading a hash result
+
+A hash lookup answers a different question from an IP lookup. A hash with many detections points to a known bad file, but a hash with no detections only means the sources have not flagged that exact file. Check where the file came from and which host ran it before closing the check, and keep the hash report with the host details from your own logs.
+
 ---
 
 ## IOC Types Supported
