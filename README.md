@@ -190,6 +190,10 @@ One failed lookup does not break the run, and the report still holds what the ot
 
 A hash lookup answers a different question from an IP lookup. A hash with many detections points to a known bad file, but a hash with no detections only means the sources have not flagged that exact file. Check where the file came from and which host ran it before closing the check, and keep the hash report with the host details from your own logs.
 
+### Reading an IP result for a shared address
+
+A flagged IP is not always one actor. Cloud hosts, VPN exits, and office NAT addresses are shared by many users at once, so the same address can carry normal traffic and bad traffic in the same hour. Check the exact time window from your own logs, the port and the user agent where you have them, and record the shared address note in the ticket before treating the result as belonging to one host or user.
+
 ---
 
 ## IOC Types Supported
