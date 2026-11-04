@@ -194,6 +194,11 @@ A hash lookup answers a different question from an IP lookup. A hash with many d
 
 A flagged IP is not always one actor. Cloud hosts, VPN exits, and office NAT addresses are shared by many users at once, so the same address can carry normal traffic and bad traffic in the same hour. Check the exact time window from your own logs, the port and the user agent where you have them, and record the shared address note in the ticket before treating the result as belonging to one host or user.
 
+
+### Before sharing a report
+
+A JSON or CSV report is safe to attach to a ticket, but check it before sending it wider. The report should hold the IOC, its type, the score and its reasons, and the timestamp. It should not hold API keys, and keys belong only in the local .env file, never in a report or a screenshot of one. If notes added by hand name an internal host or user that the reader does not need, remove that name and keep the host count and the time window instead, so the result can still be checked later.
+
 ---
 
 ## IOC Types Supported
