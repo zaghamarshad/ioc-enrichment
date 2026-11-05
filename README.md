@@ -199,6 +199,10 @@ A flagged IP is not always one actor. Cloud hosts, VPN exits, and office NAT add
 
 A JSON or CSV report is safe to attach to a ticket, but check it before sending it wider. The report should hold the IOC, its type, the score and its reasons, and the timestamp. It should not hold API keys, and keys belong only in the local .env file, never in a report or a screenshot of one. If notes added by hand name an internal host or user that the reader does not need, remove that name and keep the host count and the time window instead, so the result can still be checked later.
 
+### Checking how fresh a result is
+
+A score is only as current as the data behind it. Before acting on a result, check when each source last saw or scanned the IOC. An IP flagged months ago may have changed hands since then, and a hash with an old scan date may have newer detections that the cached result does not show. If the underlying data is old and the decision matters, run the lookup again and note both timestamps in the ticket.
+
 ---
 
 ## IOC Types Supported
