@@ -203,6 +203,10 @@ A JSON or CSV report is safe to attach to a ticket, but check it before sending 
 
 A score is only as current as the data behind it. Before acting on a result, check when each source last saw or scanned the IOC. An IP flagged months ago may have changed hands since then, and a hash with an old scan date may have newer detections that the cached result does not show. If the underlying data is old and the decision matters, run the lookup again and note both timestamps in the ticket.
 
+### Keep the original IOC with the report
+
+Save the IOC exactly as it was received, before any cleanup or formatting, alongside the report. A trimmed URL, a defanged address written back in full, or a hash copied with a missing character can change what was checked. Keeping the original form makes it possible to confirm later that the lookup matched the alert that started the check.
+
 ---
 
 ## IOC Types Supported
