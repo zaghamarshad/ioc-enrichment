@@ -207,6 +207,10 @@ A score is only as current as the data behind it. Before acting on a result, che
 
 Save the IOC exactly as it was received, before any cleanup or formatting, alongside the report. A trimmed URL, a defanged address written back in full, or a hash copied with a missing character can change what was checked. Keeping the original form makes it possible to confirm later that the lookup matched the alert that started the check.
 
+### Note the context where the IOC was seen
+
+Keep a short note with the report saying where the IOC came from in your own environment: the alert or ticket that raised it, the host and user involved if known, and the direction of the traffic or how the file arrived. The same IOC can be urgent on one host and routine on another, and that context is what lets a later reader judge the score instead of just repeating it.
+
 ---
 
 ## IOC Types Supported
