@@ -211,6 +211,10 @@ Save the IOC exactly as it was received, before any cleanup or formatting, along
 
 Keep a short note with the report saying where the IOC came from in your own environment: the alert or ticket that raised it, the host and user involved if known, and the direction of the traffic or how the file arrived. The same IOC can be urgent on one host and routine on another, and that context is what lets a later reader judge the score instead of just repeating it.
 
+### When the same IOC appears in two alerts
+
+If the same indicator turns up in a second alert, do not run and file it as a separate case by default. Check the report from the first run, link the two tickets, and note the second host or user in the first report. Run a fresh lookup only when the first result is old or the second sighting changes the picture, such as a different host running the same file. Keeping one report per IOC stops two analysts from reaching two different calls on the same indicator.
+
 ---
 
 ## IOC Types Supported
