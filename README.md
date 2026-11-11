@@ -215,6 +215,10 @@ Keep a short note with the report saying where the IOC came from in your own env
 
 If the same indicator turns up in a second alert, do not run and file it as a separate case by default. Check the report from the first run, link the two tickets, and note the second host or user in the first report. Run a fresh lookup only when the first result is old or the second sighting changes the picture, such as a different host running the same file. Keeping one report per IOC stops two analysts from reaching two different calls on the same indicator.
 
+### Recording a domain result with care
+
+A domain result needs its own note. Record the full domain as seen, including any subdomain, because a clean parent domain does not clear a subdomain and a flagged subdomain does not prove the parent is bad. Note whether the lookup checked the domain itself or a URL built on it, and keep that detail with the report so the next reader checks the same thing.
+
 ---
 
 ## IOC Types Supported
