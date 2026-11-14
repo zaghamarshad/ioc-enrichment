@@ -82,8 +82,8 @@ pip install -r requirements.txt
 Create a `.env` file in the project root:
 
 ```
-VT_API_KEY=your_virustotal_key
-ABUSE_API_KEY=your_abuseipdb_key
+VT_API_KEY=<redacted>
+ABUSE_API_KEY=<redacted>
 ```
 
 Get free API keys from:
@@ -218,6 +218,10 @@ If the same indicator turns up in a second alert, do not run and file it as a se
 ### Recording a domain result with care
 
 A domain result needs its own note. Record the full domain as seen, including any subdomain, because a clean parent domain does not clear a subdomain and a flagged subdomain does not prove the parent is bad. Note whether the lookup checked the domain itself or a URL built on it, and keep that detail with the report so the next reader checks the same thing.
+
+### Respecting the API limits on a free key
+
+Free VirusTotal and AbuseIPDB keys allow only a small number of lookups per minute and per day. If a batch run starts returning rate limit errors, stop and let the window reset instead of retrying in a tight loop, because repeated retries use up the same limited quota. Note in the ticket which IOCs were left unchecked when the limit was hit, and finish those first when the quota resets, so a partial batch is not mistaken for a completed one.
 
 ---
 
