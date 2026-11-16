@@ -223,6 +223,10 @@ A domain result needs its own note. Record the full domain as seen, including an
 
 Free VirusTotal and AbuseIPDB keys allow only a small number of lookups per minute and per day. If a batch run starts returning rate limit errors, stop and let the window reset instead of retrying in a tight loop, because repeated retries use up the same limited quota. Note in the ticket which IOCs were left unchecked when the limit was hit, and finish those first when the quota resets, so a partial batch is not mistaken for a completed one.
 
+### Writing the closing note for a check
+
+When a check is closed, leave a short closing note with the report: the IOC as received, the score and level, which sources were checked, what your own logs showed for the same time window, and the decision taken. That note is what stops the same IOC being run again from scratch on the next shift, and it makes clear whether the check was closed on a clean result, on missing data, or on context that mattered more than the score.
+
 ---
 
 ## IOC Types Supported
