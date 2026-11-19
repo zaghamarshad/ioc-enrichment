@@ -227,6 +227,10 @@ Free VirusTotal and AbuseIPDB keys allow only a small number of lookups per minu
 
 When a check is closed, leave a short closing note with the report: the IOC as received, the score and level, which sources were checked, what your own logs showed for the same time window, and the decision taken. That note is what stops the same IOC being run again from scratch on the next shift, and it makes clear whether the check was closed on a clean result, on missing data, or on context that mattered more than the score.
 
+### Checking a URL result separately
+
+A URL built on a flagged domain is not the same check as the domain alone. Record the full URL as seen, note the domain part separately, and check both where the tools allow it. Keep the URL report with the ticket, because a clean domain result does not clear the full path and a flagged path may point to one hosted file rather than the whole site.
+
 ---
 
 ## IOC Types Supported
