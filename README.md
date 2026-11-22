@@ -231,6 +231,10 @@ When a check is closed, leave a short closing note with the report: the IOC as r
 
 A URL built on a flagged domain is not the same check as the domain alone. Record the full URL as seen, note the domain part separately, and check both where the tools allow it. Keep the URL report with the ticket, because a clean domain result does not clear the full path and a flagged path may point to one hosted file rather than the whole site.
 
+### Checking a private or internal address
+
+A private address, such as one in the 10, 172.16 to 172.31, or 192.168 ranges, or a loopback address, will not have a useful public reputation result. Public sources track internet facing addresses, so a low score for an internal address says nothing about the host itself. Record the result as not applicable, check the host in your own logs instead, and note which internal host held the address at that time, since internal addresses are reused.
+
 ---
 
 ## IOC Types Supported
