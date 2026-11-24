@@ -235,6 +235,10 @@ A URL built on a flagged domain is not the same check as the domain alone. Recor
 
 A private address, such as one in the 10, 172.16 to 172.31, or 192.168 ranges, or a loopback address, will not have a useful public reputation result. Public sources track internet facing addresses, so a low score for an internal address says nothing about the host itself. Record the result as not applicable, check the host in your own logs instead, and note which internal host held the address at that time, since internal addresses are reused.
 
+### Check your own logs before spending the lookup
+
+A public result only matters if the indicator actually touched your own environment. Before running a lookup, confirm in your own logs that the IOC was seen, and note the host, the time window, and the direction of the traffic or how the file arrived. Running lookups for indicators from a forwarded alert with no local sighting spends limited API quota on checks that cannot change any decision, and it fills the ticket with results that belong to someone else's environment.
+
 ---
 
 ## IOC Types Supported
